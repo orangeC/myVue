@@ -1,18 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="contentOne">
     <h1>{{ msg }}</h1>
-    <h2>vue Hello</h2>
-    <h1>{{count}}</h1>
-    <Button type="primary">+1</Button>
+    <h2>vue contentOne</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'Contentone',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '新增和启动'
     }
   }
 }

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Bye from '@/components/Bye'
 import Blog from '@/components/Blog'
+import Contentone from '@/components/Contentone'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/blog',
       name: 'Blog',
       component: Blog
+    },
+    {
+      path: '/contentOne',
+      name: 'Contentone',
+      component: Contentone
     }
   ]
 })

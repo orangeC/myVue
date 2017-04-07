@@ -66,6 +66,9 @@ export default {
       if (e === '2') {
         this.$router.push('/bye')
       }
+      if (e === '3-1') {
+        this.$router.push('/contentOne')
+      }
       if (e === '4') {
         this.$router.push('/blog')
       }

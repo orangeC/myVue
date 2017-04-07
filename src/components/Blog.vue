@@ -2,6 +2,8 @@
   <div class="blog">
     <h1>{{ msg }}</h1>
     <h2>vue Blog</h2>
+    <h3>{{ this.$store.state.count }}</h3>
+    <Button v-on:click="userNameChange" type="primary">-1</Button>
   </div>
 </template>
 
@@ -11,6 +13,11 @@ export default {
   data () {
     return {
       msg: 'Blog to Your Vue.js App'
+    }
+  },
+  methods: {
+    userNameChange () {
+      this.$store.commit('unincrement')
     }
   }
 }

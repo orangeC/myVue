@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './App'
+import Counter from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
@@ -12,14 +12,6 @@ Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
-
 // 创建一个 store
 const store = new Vuex.Store({
   state: {
@@ -28,11 +20,23 @@ const store = new Vuex.Store({
   mutations: {
     increment (state) {
       state.count++
+    },
+    unincrement (state) {
+      state.count--
     }
   }
 })
 
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store: store,
+  template: `<div id="app"><counter></counter></div>`,
+  components: { Counter }
+})
+
 // 通过 store.state 来获取状态对象，以及通过 store.commit 方法触发状态变更
-store.commit('increment')
+// store.commit('increment')
 
 console.log(store.state.count) // -> 1

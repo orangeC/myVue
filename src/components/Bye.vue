@@ -2,6 +2,7 @@
   <div class="bye">
     <h1>{{ msg }}</h1>
     <h2>vue Bye</h2>
+    <div>{{ this.$store.state.count }}</div>
   </div>
 </template>
 

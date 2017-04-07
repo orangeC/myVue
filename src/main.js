@@ -6,6 +6,7 @@ import Counter from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import * as getters from './getters'
 
 Vue.use(iView)
 Vue.use(Vuex)
@@ -31,7 +32,8 @@ const store = new Vuex.Store({
 new Vue({
   el: '#app',
   router,
-  store: store,
+  getters,
+  store,
   template: `<div id="app"><counter></counter></div>`,
   components: { Counter }
 })

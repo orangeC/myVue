@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Blog',
   data () {
@@ -19,7 +21,10 @@ export default {
     userNameChange () {
       this.$store.commit('unincrement')
     }
-  }
+  },
+  computed: mapGetters([
+    'alert'
+  ])
 }
 </script>
 

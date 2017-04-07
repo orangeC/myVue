@@ -34,10 +34,6 @@
     <i-switch v-model="switch1" @on-change="change"></i-switch>
     </div>
     <router-view></router-view>
-    <div>
-    <router-link to="/">hello</router-link>
-    <router-link to="/bye">bye</router-link>
-    </div>
     <Radio-group v-model="theme1">
         <Radio label="light"></Radio>
         <Radio label="dark"></Radio>

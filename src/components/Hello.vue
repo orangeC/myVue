@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>vue Hello</h2>
     <h1>{{ this.$store.state.count }}</h1>
-    <Button v-on:click="userNameChange" type="primary">+1</Button>
+    <Button @click="userNameChange" type="primary">+1</Button>
   </div>
 </template>
 
